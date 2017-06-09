@@ -18,28 +18,8 @@ module.exports={
         new HtmlWebpackPlugin(),
 	],
 	devServer: {
-	    contentBase: "./dist",//本地服务器所加载的页面所在的目录
+	    contentBase: __dirname,//本地服务器所加载的页面所在的目录
 	    historyApiFallback: true,//不跳转
-	    inline: true//实时刷新
+	    //inline: true//实时刷新
 	} 
 }
-/*var webpack=require("webpack");
-var HtmlWebpackPlugin=require("html-webpack-plugin");
-var ExtrackTextPlugin=require("extract-text-webpack-plugin");
-module.exports={
-
-	entry:__dirname+"src/main.js",
-	output:{
-		path:__dirname+"/dist",
-		filename:"[name].js"
-	},
-	module:{
-		loaders:[
-		    {test:/\.css$/,loader:"style-loader!css-loader"}
-		]
-	},
-	plugins:[
-	    new webpack.BannerPlugin("WEBPACK LEARN"),
-	    new HtmlWebpackPlugin()
-	]
-}*/
